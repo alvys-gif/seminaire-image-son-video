@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image & Son : des passions aux métiers</title>
+<style>
+  body{margin:0;background:#fcf8f1;color:#26303f;font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;text-align:center}
+  header{padding:28px 16px 8px;display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap}
+  header img{height:64px;width:auto}
+  header .sep{width:1px;height:56px;background:#d9cfbd}
+  h1{font-size:26px;margin:18px 16px 4px}
+  p{margin:6px 16px;color:#5a6b86}
+  video{display:block;margin:20px auto;width:min(960px,94vw);border-radius:8px;background:#000}
+  .fin{margin:16px;font-size:13px;color:#7a808a}
+  #expire{display:none;margin:60px 16px;font-size:18px}
+</style></head><body>
+<header><img src="region-sud.svg" alt="Région Sud Provence-Alpes-Côte d'Azur"><span class="sep"></span><img src="eanis-logo-t.png" alt="EANIS"></header>
+<main id="page">
+  <h1>Image &amp; Son : des passions aux métiers</h1>
+  <p>Séminaire de découverte · décembre 2026</p>
+  <video controls preload="metadata" playsinline src="spot-seminaire-image-et-son.mp4"></video>
+  <p class="fin">Vidéo d'ouverture, 33 secondes. Lien valable jusqu'au 4 novembre 2026.</p>
+</main>
+<p id="expire">Ce lien n'est plus valable. Merci de contacter EANIS : contact@eanis.net</p>
+<script>
+  // validité de 15 jours à partir du 20/10/2026 : au-delà, la page se ferme d'elle-même
+  if (new Date() > new Date('2026-11-04T23:59:59')) { document.getElementById('page').style.display='none'; document.getElementById('expire').style.display='block'; }
+</script>
+</body></html>

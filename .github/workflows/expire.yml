@@ -1,0 +1,21 @@
+name: Fin de validité du lien (15 jours)
+on:
+  schedule:
+    - cron: '0 6 5 11 *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retirer la vidéo et fermer la page
+        run: |
+          git rm -f spot-seminaire-image-et-son.mp4 || true
+          cp expire.html index.html
+          git config user.name "expire-bot"
+          git config user.email "expire-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Fin de validité du lien" || true
+          git push
